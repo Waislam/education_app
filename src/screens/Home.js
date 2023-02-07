@@ -22,11 +22,11 @@ const Homepage = () => {
                     <View style={styles.descriptionBody}>
                         <Text style={styles.descriptionText}>{descriptionText}</Text>
                     </View>
-                    {/* <View>
+                    <View>
                         <View style={styles.lineStyle}></View>
                         <MenuPage style={styles.singleMenu}/>
                         <View style={[styles.lineStyle, {marginVertical:10}]}></View>
-                    </View> */}
+                    </View>
                 </View>
 
             </SafeAreaView>

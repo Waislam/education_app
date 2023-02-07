@@ -15,36 +15,40 @@ export default function App() {
     const Stack = createNativeStackNavigator();
 
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName='Home'>
-                {/* home Screen */}
-                <Stack.Screen name='Home' component={Homepage}
-                    options={{
-                        headerShown: false,
-                        headerTitleAlign: "center"
-                    }}
-                />
+        <>
+            <NavigationContainer>
+                <Stack.Navigator initialRouteName='Home'>
+                    {/* home Screen */}
+                    <Stack.Screen name='Home' component={Homepage}
+                        options={{
+                            headerShown: false,
+                            headerTitleAlign: "center"
+                        }}
+                    />
 
-                {/* about screen */}
-                <Stack.Screen name='About' component={AboutPage}
-                    options={{
-                        headerTitleAlign: "center"
-                    }}
-                />
+                    {/* about screen */}
+                    <Stack.Screen name='About' component={AboutPage}
+                        options={{
+                            headerTitleAlign: "center"
+                        }}
+                    />
 
-                {/* consta screenpage */}
-                <Stack.Screen name='Contact' component={ContactPage}
-                    options={{
-                        headerTitleAlign: "center"
-                    }}
-                />
-            </Stack.Navigator>
-            <View>
-                <View style={styles.lineStyle}></View>
-                <MenuPage style={styles.singleMenu} />
-                <View style={[styles.lineStyle, { marginVertical: 10 }]}></View>
-            </View>
-        </NavigationContainer>
+                    {/* consta screenpage */}
+                    <Stack.Screen name='Contact' component={ContactPage}
+                        options={{
+                            headerTitleAlign: "center"
+                        }}
+                    />
+                </Stack.Navigator>
+                {/* <View>
+                    <View style={styles.lineStyle}></View>
+                    <MenuPage style={styles.singleMenu} />
+                    <View style={[styles.lineStyle, { marginVertical: 10 }]}></View>
+                </View> */}
+
+            </NavigationContainer>
+
+        </>
     );
 }
 
@@ -64,11 +68,11 @@ export default function App() {
 // });
 
 const styles = StyleSheet.create({
-    menuContainer:{
-        
+    menuContainer: {
+
     },
-    lineStyle:{
-        borderWidth:0.3,
-        borderColor:'grey'
+    lineStyle: {
+        borderWidth: 0.3,
+        borderColor: 'grey'
     },
 })
