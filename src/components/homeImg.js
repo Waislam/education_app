@@ -15,8 +15,8 @@ const IMgContainerForHomeReuse=({imgagesource, residemodeprops})=>{
 const styles = StyleSheet.create({
     contianer: {
         // flex:2,
-        justifyContent: 'center',
-        alignItems: 'center'
+        // justifyContent: 'center',
+        // alignItems: 'center'
     },
     text_deco: {
         color: 'green',
