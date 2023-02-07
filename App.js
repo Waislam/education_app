@@ -8,28 +8,42 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Homepage from './src/screens/Home';
 import AboutPage from './src/screens/About';
 import ContactPage from './src/screens/Contact';
+import MenuPage from './src/components/Menu';
 
 export default function App() {
 
     const Stack = createNativeStackNavigator();
 
     return (
-        // <View style={styles.container}>
-        //   <Text style={styles.textDeco}>This is an educational app</Text>
-        //   <Homepage />
-        //   {/* <StatusBar style="auto" /> */}
-        // </View>
         <NavigationContainer>
             <Stack.Navigator initialRouteName='Home'>
                 {/* home Screen */}
-                <Stack.Screen name='Home' component={Homepage}/>
+                <Stack.Screen name='Home' component={Homepage}
+                    options={{
+                        headerShown: false,
+                        headerTitleAlign: "center"
+                    }}
+                />
 
                 {/* about screen */}
-                <Stack.Screen name='About' component={AboutPage} />
+                <Stack.Screen name='About' component={AboutPage}
+                    options={{
+                        headerTitleAlign: "center"
+                    }}
+                />
 
                 {/* consta screenpage */}
-                <Stack.Screen name='Contact' component={ContactPage} />
+                <Stack.Screen name='Contact' component={ContactPage}
+                    options={{
+                        headerTitleAlign: "center"
+                    }}
+                />
             </Stack.Navigator>
+            <View>
+                <View style={styles.lineStyle}></View>
+                <MenuPage style={styles.singleMenu} />
+                <View style={[styles.lineStyle, { marginVertical: 10 }]}></View>
+            </View>
         </NavigationContainer>
     );
 }
@@ -48,3 +62,13 @@ export default function App() {
 //         fontWeight: "700"
 //     },
 // });
+
+const styles = StyleSheet.create({
+    menuContainer:{
+        
+    },
+    lineStyle:{
+        borderWidth:0.3,
+        borderColor:'grey'
+    },
+})

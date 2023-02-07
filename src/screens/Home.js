@@ -22,11 +22,11 @@ const Homepage = () => {
                     <View style={styles.descriptionBody}>
                         <Text style={styles.descriptionText}>{descriptionText}</Text>
                     </View>
-                    <View>
+                    {/* <View>
                         <View style={styles.lineStyle}></View>
                         <MenuPage style={styles.singleMenu}/>
                         <View style={[styles.lineStyle, {marginVertical:10}]}></View>
-                    </View>
+                    </View> */}
                 </View>
 
             </SafeAreaView>
@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     contianer: {
         display:'flex',
         justifyContent: 'space-between',
-        height:"100%"
+        height:"100%",
+        paddingTop:40
     },
     text_deco: {
         color: 'green',

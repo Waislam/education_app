@@ -1,5 +1,6 @@
-import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet } from "react-native"
+import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet, Image } from "react-native"
 import { useNavigation } from "@react-navigation/native"
+import IMgContainerForHomeReuse from "./homeImg";
 
 const MenuPage = () => {
 
@@ -12,17 +13,18 @@ const MenuPage = () => {
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Home')}
                     >
-                        <Text>Home</Text>
+                        <Image style={styles.iconStyle} source={require('../../assets/menu/home.png')} />
+
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('About')}
                     >
-                        <Text>About</Text>
+                        <Image style={styles.iconStyle} source={require('../../assets/menu/about.png')} />
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Contact')}
                     >
-                        <Text>Contact</Text>
+                        <Image style={styles.iconStyle} source={require('../../assets/menu/contact.png')} />
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -31,11 +33,16 @@ const MenuPage = () => {
 }
 
 const styles = StyleSheet.create({
-    menuContainer:{
-        flexDirection:"row",
-        justifyContent:"space-evenly",
+    menuContainer: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
         // flex:3,
-    }
+    },
+    iconStyle: {
+        height: 40,
+        width: 40,
+        marginTop:5
+    },
 })
 
 export default MenuPage;
